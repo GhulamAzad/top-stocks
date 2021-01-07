@@ -1,0 +1,135 @@
+.nav{
+
+    position : fixed;
+    width : 100%;
+    top : 0;
+    left : 0;
+
+    z-index: 100;
+
+    padding: 1rem 2.5rem;
+    background-color : rgba($color-blue , .9);
+    display : flex;
+    justify-content: space-between;    
+    align-items: center;
+
+    @media only screen and (max-width: $br-large) {
+         justify-content: center;
+    }
+
+
+    
+    &__list{
+        list-style: none;
+        display: flex;
+
+        @media only screen and (max-width: $br-large) {
+            display: block;
+            padding: 8rem 2rem;
+        }
+   
+
+    }
+
+    &__items{
+        text-transform: uppercase;
+        &:not(:last-child){
+            margin-right: 2rem;
+        }
+
+        
+        @media only screen and (max-width: $br-large) {
+            padding: 1rem;
+
+            &:not(:last-child){
+                border-bottom: 1px solid rgba($color-white,.2);
+            }
+
+       }
+
+      
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $color-white;
+        font-size: 1.5em;
+        font-weight: 400;
+
+        &--active{
+            font-weight: 600;
+        }
+
+        &:hover{
+            color: rgba($color-white,.6);
+        }
+
+        &--logo{
+            font-family: $primary-font;
+            font-size: 2rem;
+     
+
+            &:hover{
+                color: rgba($color-white,1);
+            }
+
+        }
+
+        @media only screen and (max-width: $br-large) {
+           font-size: 2em;    
+           letter-spacing: 2px;
+        }
+
+
+
+    }
+
+
+    &__phone{
+
+        @media only screen and (max-width: $br-large) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width:0%;
+            height: 100%;
+            background-color: rgba($color-blue , .9);
+            overflow: hidden;
+            transition: width .3s;
+        }
+
+        &--open{
+            width: 100%;
+        }
+   
+    }
+
+    &__menu-btn{
+        position: fixed;
+        top: 1.4rem;
+        left: 2rem;
+        font-size: 2.5em;
+        color: $color-white;
+        cursor: pointer;
+        display: none;
+
+        @media only screen and (max-width: $br-large) {
+            display: inline-block;
+        }
+    }
+
+    &__close-btn{
+        position: absolute;
+        top: 1.4rem;
+        right: 2rem;
+        font-size: 2.5em;
+        color: $color-white;
+        cursor: pointer;
+        display: none;
+
+        @media only screen and (max-width: $br-large) {
+            display: inline-block;
+        }
+    }
+
+}
