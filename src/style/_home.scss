@@ -2,17 +2,22 @@
 
     background-image : url('./../res/cover.webp');
     background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
     height : 75vh;
     min-height: 400px;
-
     position: relative;
+
+    @media only screen and (max-width: $br-mob) {
+        background-image : url('./../res/cover-mob.webp');
+    }
 
     &__circle{
         position: absolute;
-        bottom: -1rem;
-        left: 80%;
-        width: 18rem;
-        height: 18rem;
+        bottom: -1.8rem;
+        left: 78%;
+        width: 20rem;
+        height: 20rem;
         background-color: $color-white;
         color: $color-blue;
         border-radius: 50%;
@@ -20,10 +25,13 @@
 
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
+        font-size: 1.3em !important;
+
         @media only screen and (max-width: $br-large) {
             left: 50%;
             width: 16rem;
             height: 16rem;
+            font-size: 1.1em !important;
         }
     }
 
@@ -109,6 +117,7 @@
     background-image: linear-gradient( to left , rgba(0, 0, 0, 0.521) , rgba(0, 0, 0, 0.473)), url('./../res/features.webp');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: bottom;
     text-align: center;
     color: $color-white;
 

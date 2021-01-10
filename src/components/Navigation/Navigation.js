@@ -47,16 +47,16 @@ const Navigation = () =>{
 
                 <ul className="nav__list">
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/">Home</NavLink>
+                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/" onClick={navToggle}>Home</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/usa-stock">USA Stocks</NavLink>
+                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/usa-stock" onClick={navToggle}>USA Stocks</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink  activeClassName ="nav__link--active" className="nav__link" to="/india-stock">India Stocks</NavLink>
+                        <NavLink  activeClassName ="nav__link--active" className="nav__link" to="/india-stock" onClick={navToggle}>India Stocks</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/about-us">About Us</NavLink>
+                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/about-us" onClick={navToggle}>About Us</NavLink>
                     </li>
                 </ul>
 

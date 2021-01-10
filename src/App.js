@@ -11,6 +11,8 @@ import USAStock from './components/USAStock/USAStock';
 import About from "./components/About/About";
 import IndianStock from "./components/IndianStock/IndianStock";
 
+import ChatButton from "./components/ChatButton/ChatButton";
+
 
 const  App = () =>{
   return (
@@ -23,18 +25,19 @@ const  App = () =>{
             <Route exact path="/">
                 <Home />
             </Route>
-            <Route path="/usa-stock">
+            <Route exact path="/usa-stock">
                 <USAStock />
             </Route>
-            <Route path="/india-stock">
+            <Route exact path="/india-stock">
                 <IndianStock />
             </Route>
-            <Route path="/about-us">
+            <Route exact path="/about-us">
                 <About />
             </Route>
         </Switch>
 
       <Footer />
+      <ChatButton />
 
     </Router>
 

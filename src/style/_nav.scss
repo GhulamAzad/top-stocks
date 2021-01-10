@@ -53,12 +53,9 @@
     &__link{
         text-decoration: none;
         color: $color-white;
-        font-size: 1.5em;
+        font-size: 14px;
+        letter-spacing: 2px;
         font-weight: 400;
-
-        &--active{
-            font-weight: 600;
-        }
 
         &:hover{
             color: rgba($color-white,.6);
@@ -132,4 +129,8 @@
         }
     }
 
+}
+
+.nav__link--active{
+    font-weight: 700;
 }
