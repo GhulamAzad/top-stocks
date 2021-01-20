@@ -136,3 +136,33 @@
 .chat-box--open {
   display: block;
 }
+
+.floating-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.floating-input label {
+  font-size: 1rem;
+  padding: 0 1rem;
+  color: $color-grey;
+  font-weight: 500;
+  pointer-events: none;
+
+  position: absolute;
+  transform: translate(2px, 14px) scale(1);
+
+  transform-origin: top left;
+  transition: all 0.2s ease-out;
+}
+
+.floating-input:focus-within label {
+  transform: translate(2px, 0) scale(0.8);
+}
+
+.floating-input .Active {
+  transform: translate(2px, 0) scale(0.8);
+}

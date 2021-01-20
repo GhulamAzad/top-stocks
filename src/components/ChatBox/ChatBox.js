@@ -5,6 +5,35 @@ const ChatBox = () => {
 
     const [isChatOpen, setChatOpen] = useState(false);
 
+    const [isNameFill, setIsNameFill] = useState(false);
+    const [nameValue, setNameValue] = useState('');
+
+    const [isEmailFill, setIsEmailFill] = useState(false);
+    const [emailValue, setEmailValue] = useState('');
+
+
+    const handleTextChange = (text, type) => {
+
+        if (type === 'name') {
+            setNameValue(text);
+
+            if (text !== '')
+                setIsNameFill(true);
+            else
+                setIsNameFill(false);
+        } else {
+            setEmailValue(text);
+
+            if (text !== '')
+                setIsEmailFill(true);
+            else
+                setIsEmailFill(false);
+        }
+
+
+    }
+
+
     const toggleChat = () => {
         setChatOpen(prevState => !prevState);
     }
@@ -35,9 +64,20 @@ const ChatBox = () => {
                         Hi! Let us know how we can help and we’ll respond shortly.
                         </div>
 
-                    <input className="chat-box__name mb-1_5" type="text" placeholder="Name*" required />
 
-                    <input className="chat-box__email mb-1_5" type="email" placeholder="Email*" required />
+                    <div className="floating-input">
+                        <input type="text" required
+                            value={nameValue}
+                            onChange={(e) => handleTextChange(e.target.value, 'name')} />
+                        <label className={isNameFill ? "Active" : ""} htmlFor="text" >Name*</label>
+                    </div>
+
+                    <div className="floating-input">
+                        <input type="email" required
+                            value={emailValue}
+                            onChange={(e) => handleTextChange(e.target.value, 'email')} />
+                        <label className={isEmailFill ? "Active" : ""} htmlFor="email" >Email*</label>
+                    </div>
 
                     <textarea className="chat-box__text-area mb-1_5" cols="30" rows="8" placeholder="How can we help?*" required></textarea>
 
