@@ -1,20 +1,25 @@
 
 import { useEffect, useState } from 'react';
-import {Link, NavLink} from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
-const Navigation = () =>{
+const Navigation = () => {
 
-    const [isNavOpen , setNavOpen ] = useState(false);
+    const [isNavOpen, setNavOpen] = useState(false);
 
 
-    const navToggle = () =>{
-            setNavOpen( prevState => !prevState);
+    const navToggle = () => {
+
+        if (window.innerWidth > 999) return;
+
+        setNavOpen(prevState => !prevState);
+
+        
     }
 
-    useEffect( ()=>{
+    useEffect(() => {
 
-        const getWindowSize = ()=> {
-            if(window.innerWidth > 999){
+        const getWindowSize = () => {
+            if (window.innerWidth > 999) {
                 setNavOpen(false);
             }
         }
@@ -22,41 +27,38 @@ const Navigation = () =>{
         getWindowSize();
         return () => window.removeEventListener('resize', getWindowSize);
 
-    },[])
-
-
-
+    }, [])
 
     return (
-        
+
         <nav className="nav">
 
             <div className="nav__menu-btn" onClick={navToggle}>
-                  <i className="ri-menu-line"></i>
+                <i className="ri-menu-line"></i>
             </div>
 
             <h1 className="nav__logo">
                 <Link className="nav__link nav__link--logo" to="/">TOP STOCKS</Link>
             </h1>
-            
-            <div className={ isNavOpen ? 'nav__phone nav__phone--open' : 'nav__phone'}>
+
+            <div className={isNavOpen ? 'nav__phone nav__phone--open' : 'nav__phone'}>
 
                 <div className="nav__close-btn" onClick={navToggle}>
-                       <i className="ri-close-line"></i>
+                    <i className="ri-close-line"></i>
                 </div>
 
                 <ul className="nav__list">
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/" onClick={navToggle}>Home</NavLink>
+                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/" onClick={navToggle}>Home</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/usa-stock" onClick={navToggle}>USA Stocks</NavLink>
+                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/usa-stock" onClick={navToggle}>USA Stocks</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink  activeClassName ="nav__link--active" className="nav__link" to="/india-stock" onClick={navToggle}>India Stocks</NavLink>
+                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/india-stock" onClick={navToggle}>India Stocks</NavLink>
                     </li>
                     <li className="nav__items">
-                        <NavLink activeClassName ="nav__link--active" className="nav__link" to="/about-us" onClick={navToggle}>About Us</NavLink>
+                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/about-us" onClick={navToggle}>About Us</NavLink>
                     </li>
                 </ul>
 
