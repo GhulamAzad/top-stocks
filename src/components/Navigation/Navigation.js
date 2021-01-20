@@ -13,7 +13,7 @@ const Navigation = () => {
 
         setNavOpen(prevState => !prevState);
 
-        
+
     }
 
     useEffect(() => {
@@ -49,7 +49,7 @@ const Navigation = () => {
 
                 <ul className="nav__list">
                     <li className="nav__items">
-                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/" onClick={navToggle}>Home</NavLink>
+                        <NavLink activeClassName="nav__link--active" className="nav__link" to="/" exact onClick={navToggle}>Home</NavLink>
                     </li>
                     <li className="nav__items">
                         <NavLink activeClassName="nav__link--active" className="nav__link" to="/usa-stock" onClick={navToggle}>USA Stocks</NavLink>

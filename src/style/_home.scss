@@ -1,205 +1,187 @@
-.hero{
+.hero {
+  background-image: url("./../res/cover.webp");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  height: 75vh;
+  min-height: 400px;
+  position: relative;
 
-    background-image : url('./../res/cover.webp');
-    background-size: cover;
-    background-position: center top;
-    background-repeat: no-repeat;
-    height : 75vh;
-    min-height: 400px;
-    position: relative;
+  @media only screen and (max-width: $br-mob) {
+    background-image: url("./../res/cover-mob.webp");
+  }
 
-    @media only screen and (max-width: $br-mob) {
-        background-image : url('./../res/cover-mob.webp');
-    }
-
-    &__circle{
-        position: absolute;
-        bottom: -1.8rem;
-        left: 78%;
-        width: 20rem;
-        height: 20rem;
-        background-color: $color-white;
-        color: $color-blue;
-        border-radius: 50%;
-        transform: translateX(-50%);
-
-        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-
-        font-size: 1.3em !important;
-
-        @media only screen and (max-width: $br-large) {
-            left: 50%;
-            width: 16rem;
-            height: 16rem;
-            font-size: 1.1em !important;
-        }
-    }
-
-    &__text{
-        text-align: center;
-        line-height: 1.4;
-        font-weight: 400;
-    }
-
-}
-
-.middle{
-    padding: 3rem;
-    text-align: center;
+  &__circle {
+    position: absolute;
+    bottom: -1.8rem;
+    left: 78%;
+    width: 20rem;
+    height: 20rem;
     background-color: $color-white;
+    color: $color-blue;
+    border-radius: 50%;
+    transform: translateX(-50%);
 
-   
-    &__input-wrapper{
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 
-        margin: auto;
-        display: flex;
-        justify-content: center;
-
-        @media only screen and (max-width: $br-mob) {
-            flex-wrap: wrap;
-        }
-     
-
-        & > div{
-            position: relative;
-            margin-right: 2rem;
-            
-            @media only screen and (max-width: $br-mob) {
-                min-width: 100%;
-                margin-right: 0;
-                margin-bottom: 1rem;
-            }
-        }
-
-        button{
-            @media only screen and (max-width: $br-mob) {
-                flex: 1;
-                padding: 1rem;
-            }
-        }
-
-    }
-
-
-
-    &__label {
-        position: absolute;
-        top: 0;
-        left: 1rem;
-        font-weight: 500;
-        transition: all 0.3s;
-        font-size: 1.4em;
-    }
-
-    &__input{
-        display: block;
-        padding:1rem;
-        outline: none;
-        border: none;
-        background-color: $color-light-grey;
-        min-width: 45vw;
-        width: 100%;
-
-    }
-
-    &__input:placeholder-shown + &__label {
-        visibility: hidden;
-        transform: translateY(1rem);
-    }
-
-
-}
-
-
-.review{
-    padding: 3rem;
-    height: 32rem;
-    background-image: linear-gradient( to left , rgba(0, 0, 0, 0.521) , rgba(0, 0, 0, 0.473)), url('./../res/features.webp');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    text-align: center;
-    color: $color-white;
-
-    &__heading{
-        font-size: 4.4em;
-    }
-
-    &__circle{
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: #fff;
-        display: inline-block;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 2px solid #eee;
-
-        & > img{
-            padding: .6rem;
-            width: 100%;
-            height: 100%;
-        }
-
-
-    }
-
-    &__box{
-        display: inline-block;
-        padding: 3rem 4rem;
-        background-color: rgba(0, 0, 0, 0.4);
-        text-align: center;
-    }
-
-}
-
-.contact{
-    display: grid;
-    grid-template-columns: repeat(2 , 1fr);
-    background-color: $color-white;
-
+    font-size: 1.3em !important;
 
     @media only screen and (max-width: $br-large) {
-        grid-template-columns: 1fr;
+      left: 50%;
+      width: 16rem;
+      height: 16rem;
+      font-size: 1.1em !important;
     }
-    
+  }
 
-    &__left{
-        padding: 3rem 5.5rem;
+  &__text {
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
 
-        @media only screen and (max-width: $br-large) {
-            padding: 3rem 2rem
-    
-        }
-        
+.middle {
+  padding: 3rem;
+  text-align: center;
+  background-color: $color-white;
 
-    }
+  &__input-wrapper {
+    margin: auto;
+    display: flex;
+    justify-content: center;
 
-    &__right{
-        background-color: red;
-
-        @media only screen and (max-width: $br-large) {
-            grid-row: 1;
-            grid-column: 1;
-        }
-    }
-
-
-    &__btn{
-        display: flex;
-        align-items: center;
-        box-shadow: none;
-        background-color: $color-grey;
-
-        &:hover{
-            background-color: #4f6672
-        }
-
-        img{
-            height: 2rem;
-            margin-right: 1rem;
-        }
-
+    @media only screen and (max-width: $br-mob) {
+      flex-wrap: wrap;
     }
 
+    & > div {
+      position: relative;
+      margin-right: 2rem;
 
+      @media only screen and (max-width: $br-mob) {
+        min-width: 100%;
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    button {
+      @media only screen and (max-width: $br-mob) {
+        flex: 1;
+        padding: 1rem;
+      }
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 1rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    font-size: 1.4em;
+  }
+
+  &__input {
+    display: block;
+    padding: 1rem;
+    outline: none;
+    border: none;
+    background-color: $color-light-grey;
+    min-width: 45vw;
+    width: 100%;
+  }
+
+  &__input:placeholder-shown + &__label {
+    visibility: hidden;
+    transform: translateY(1rem);
+  }
+}
+
+.review {
+  padding: 3rem;
+  height: 32rem;
+  background-image: linear-gradient(
+      to left,
+      rgba(0, 0, 0, 0.521),
+      rgba(0, 0, 0, 0.473)
+    ),
+    url("./../res/features.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  text-align: center;
+  color: $color-white;
+
+  &__heading {
+    font-size: 4.4em;
+  }
+
+  &__circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #eee;
+
+    & > img {
+      padding: 0.6rem;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__box {
+    display: inline-block;
+    padding: 3rem 4rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+  }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: $color-white;
+
+  @media only screen and (max-width: $br-large) {
+    grid-template-columns: 1fr;
+  }
+
+  &__left {
+    padding: 3rem 5.5rem;
+
+    @media only screen and (max-width: $br-large) {
+      padding: 3rem 2rem;
+    }
+  }
+
+  &__right {
+    background-color: red;
+
+    @media only screen and (max-width: $br-large) {
+      grid-row: 1;
+      grid-column: 1;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    background-color: $color-grey;
+    padding: 0.8rem 0.4rem;
+
+    &:hover {
+      background-color: #4f6672;
+    }
+
+    img {
+      height: 1.5rem;
+      margin-right: 0.5rem;
+    }
+  }
 }

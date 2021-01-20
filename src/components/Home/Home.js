@@ -1,6 +1,6 @@
 
 import googleIcon from './../../res/google.jpg';
-import whatsApp from './../../res/whatsapp.png';
+import whatsApp from './../../res/whatsapp.svg';
 
 const Home = () => {
     return (
@@ -46,7 +46,8 @@ const Home = () => {
                     <h2 className="heading-2 mb-2">HOW CAN WE HELP?</h2>
                     <p className="default-text mb-2">We love helping businesses thrive. So, contact us, and let's see how we can help you impact your business growth. </p>
                     <button className="contact__btn btn mb-2">
-                        <img src={whatsApp} alt=" whatsapp icon" />
+                        <img src={whatsApp} alt="whatsapp icon" />
+
                   Message us on WhatsApp
                 </button>
                     <h2 className="heading-2 mb-2">TOP STOCKS EVERY DAY</h2>
@@ -63,7 +64,7 @@ const Home = () => {
 
                 <div className="contact__right">
 
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96775.64909310154!2d-74.07601272505498!3d40.71275413455759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe535207f7f71bdfe!2sThe%20Oculus!5e0!3m2!1sen!2sin!4v1610045224394!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style={{border:"0"}}allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d96775.64909310154!2d-74.07601272505498!3d40.71275413455759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe535207f7f71bdfe!2sThe%20Oculus!5e0!3m2!1sen!2sin!4v1610045224394!5m2!1sen!2sin" width="100%" height="100%" frameborder="0" style={{ border: "0" }} allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 
                 </div>
 

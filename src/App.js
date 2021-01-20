@@ -11,33 +11,33 @@ import USAStock from './components/USAStock/USAStock';
 import About from "./components/About/About";
 import IndianStock from "./components/IndianStock/IndianStock";
 
-import ChatButton from "./components/ChatButton/ChatButton";
+import ChatBox from "./components/ChatBox/ChatBox";
 
 
-const  App = () =>{
+const App = () => {
   return (
     <Router>
-      
-       <Navigation />
 
-        <Switch>
-           
-            <Route exact path="/">
-                <Home />
-            </Route>
-            <Route exact path="/usa-stock">
-                <USAStock />
-            </Route>
-            <Route exact path="/india-stock">
-                <IndianStock />
-            </Route>
-            <Route exact path="/about-us">
-                <About />
-            </Route>
-        </Switch>
+      <Navigation />
+
+      <Switch>
+
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route exact path="/usa-stock">
+          <USAStock />
+        </Route>
+        <Route exact path="/india-stock">
+          <IndianStock />
+        </Route>
+        <Route exact path="/about-us">
+          <About />
+        </Route>
+      </Switch>
 
       <Footer />
-      <ChatButton />
+      <ChatBox />
 
     </Router>
 

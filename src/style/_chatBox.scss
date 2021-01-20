@@ -1,0 +1,138 @@
+.chat-button {
+  background-color: $color-blue;
+  color: #fff;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1rem;
+  font-size: 3em;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 18px;
+}
+
+.chat-box {
+  position: fixed;
+  top: 0;
+  right: 1.5rem;
+  height: calc(100vh - 6rem);
+  width: 380px;
+  background-color: $color-white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 3px 18px;
+  z-index: 101;
+  border-radius: 3px;
+  border: 1px solid $color-white;
+  overflow: auto;
+  display: none;
+
+  @media only screen and (max-width: $br-chat) {
+    width: 100%;
+    height: 100%;
+    right: 0;
+  }
+
+  &__top {
+    position: relative;
+    background-color: $color-blue;
+    padding: 1.5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 2.5rem;
+    color: $color-white;
+    font-size: 2em;
+    font-weight: 550;
+    letter-spacing: 3px;
+  }
+
+  &__close {
+    position: absolute;
+    right: 0.7rem;
+    top: 1rem;
+    font-size: 1.2em;
+    display: none;
+
+    @media only screen and (max-width: $br-chat) {
+      display: block;
+    }
+  }
+
+  &__hi {
+    background-color: $color-chat-box;
+    color: #000;
+    font-size: 1rem;
+    letter-spacing: normal;
+    font-weight: 400;
+    width: 315px;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-top: 1rem;
+    text-align: left;
+
+    @media only screen and (max-width: $br-chat) {
+      width: 100%;
+    }
+  }
+
+  &__form {
+    position: relative;
+    z-index: 10;
+    margin-top: -2.5rem;
+    padding: 0 1.5rem;
+    text-align: center;
+
+    input[type="text"],
+    input[type="email"] {
+      background-color: $color-light-grey;
+      outline: none;
+      border: none;
+      padding: 1rem;
+      width: 100%;
+      &:focus {
+        border: 1px solid #000;
+      }
+    }
+  }
+
+  &__text-area {
+    background-color: $color-light-grey;
+    outline: none;
+    font-size: 1.1rem;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    resize: vertical;
+    &:focus {
+      border: 1px solid #000;
+    }
+  }
+
+  &__send {
+    padding: 1rem 2.2rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    box-sizing: border-box;
+
+    @media only screen and (max-width: $br-chat) {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
+  &__captcha {
+    padding-top: 1rem;
+    font-size: 1.2em;
+    font-weight: 400;
+    color: $color-grey;
+
+    a {
+      text-decoration: none;
+      color: $color-blue;
+    }
+  }
+}
+
+.chat-box--open {
+  display: block;
+}
